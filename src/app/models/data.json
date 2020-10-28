@@ -1,0 +1,18 @@
+{
+   "namespace":"master",
+   "services":[
+      "nodejs",
+      "redis",
+      "spring-boot"
+   ],
+   "values":{
+      "spec":{
+         "destination":{
+            "server":"https://kubernetes.default.svc"
+         },
+         "source":{
+            "targetRevision":"HEAD"
+         }
+      }
+   }
+}

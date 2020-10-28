@@ -1,0 +1,9 @@
+.card {
+    
+    background-color: wheat;
+    left: 10%;
+    /* align-items: center; */
+    margin: 20px;
+    width: auto;
+    height: fit-content;
+  }

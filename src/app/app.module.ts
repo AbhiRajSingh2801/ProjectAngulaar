@@ -17,6 +17,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { FooterComponent } from './my-container/footer/footer.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatIconModule} from '@angular/material/icon';
+import {HttpClientModule} from '@angular/common/http'
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatButtonModule,
     FlexLayoutModule,
     MatIconModule,
+    HttpClientModule,
     BrowserAnimationsModule
   ],
   providers: [],

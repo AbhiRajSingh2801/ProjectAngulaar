@@ -1,0 +1,14 @@
+.card {
+
+    float: left;
+    right: 40%;
+    /* align-items: center; */
+    margin: 20px;
+    background:wheat;
+    
+       
+}
+.content{
+    height: 255px;
+    overflow: auto;
+}

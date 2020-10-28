@@ -1,0 +1,20 @@
+ <mat-card class="card">
+<mat-card-title style="text-align: center;">Services</mat-card-title>
+<mat-card-subtitle style="text-align: center;">check services</mat-card-subtitle>
+
+<mat-card-content>
+  <h2 style="text-align: center;">
+    Details:
+ </h2>
+ <h3 style="text-align:left;">Namespace Name : {{nmsps.name}}</h3>
+
+  <mat-selection-list  *ngIf="nmsps">
+    <mat-list-option *ngFor="let i of datajs.services">
+      {{i}}
+    </mat-list-option>
+  </mat-selection-list>
+</mat-card-content>
+<mat-card-actions></mat-card-actions>
+<mat-card-footer></mat-card-footer>
+</mat-card>
+
