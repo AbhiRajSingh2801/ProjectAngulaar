@@ -17,7 +17,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { FooterComponent } from './my-container/footer/footer.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatIconModule} from '@angular/material/icon';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatInputModule} from '@angular/material/input';
+
 
 
 @NgModule({
@@ -41,7 +44,8 @@ import {HttpClientModule} from '@angular/common/http'
     FlexLayoutModule,
     MatIconModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,MatInputModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

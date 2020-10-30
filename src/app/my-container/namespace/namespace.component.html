@@ -1,17 +1,19 @@
 <div class="row">
   <div class="col-lg-4">
-<mat-card class="card">
-<mat-card-title>List of NameSpaces</mat-card-title>
+<mat-card class="card" *ngIf="nmsps != undefined">
+<mat-card-title>List of Namespaces</mat-card-title>
 <mat-card-subtitle >Click Below</mat-card-subtitle>
 <mat-card-content class="content">
   <mat-selection-list  [multiple]="false">
-    <mat-list-option *ngFor="let nmsp of nmsps" (click)="onselectNamespace(nmsp)">
-      {{nmsp}}
+    <mat-list-option *ngFor="let nmsp of nmsps;" (click)="onselectNamespace(nmsp)">
+      {{nmsp.name}}
     </mat-list-option>
   </mat-selection-list>
 </mat-card-content>
 <mat-card-actions></mat-card-actions>
 </mat-card>
+<table>
+</table>
 </div>
 <div class="col-lg-4">
 <app-namespace-detail [nmsps] = "selectednmsps"></app-namespace-detail>

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Namespace } from "../../models/namespace";
-import data from '../../models/data.json';
+import { NamespaceService } from 'src/app/models/namespace.service';
+// import { Namespace } from "../../models/namespace";
+// import data from '../../models/data.json';
 
 @Component({
   selector: 'app-namespace-detail',
@@ -8,16 +9,20 @@ import data from '../../models/data.json';
   styleUrls: ['./namespace-detail.component.css']
 })
 export class NamespaceDetailComponent implements OnInit {
+  selectedserv:any;
+  services: any ;
 
-  datajs:any= data ;
-
-  @Input() nmsps: Namespace;
+  @Input() nmsps: any;
   
   constructor() { }
 
   ngOnInit()  
     {
-      console.log(this.nmsps) ;
+      this.services = this.nmsps.services ;
+      console.log(this.nmsps)
+    }
+    onSelectservices(serv: NamespaceService) {
+      this.selectedserv = this.services;
     }
 
 }

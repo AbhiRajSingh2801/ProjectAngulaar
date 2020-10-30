@@ -10,7 +10,7 @@ import {NamespaceService} from '../../models/namespace.service';
 export class NamespaceComponent implements OnInit {
 
   public nmsps: any;
-  selectednmsps: Namespace;
+  selectednmsps: any;
 
 
   constructor(private namespaceservice:NamespaceService) {
@@ -23,16 +23,20 @@ export class NamespaceComponent implements OnInit {
 
 }
   async ngOnInit() {
+    
     let data = await this.namespaceservice.getData().then((response)=>{
-    console.log(JSON.stringify(response))
+    this.nmsps = response["namespaces"]
+   
     })
-    }
+  }
    
 
   
 
-  onselectNamespace(nmsp: Namespace) {
-    this.selectednmsps = nmsp;
+  async onselectNamespace(nmsp: any) {
+    //
+    let data = await this.namespaceservice.getServices(nmsp.name,nmsp.hash)
+    this.selectednmsps = data;
   }
 
 }

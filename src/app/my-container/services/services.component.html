@@ -1,7 +1,9 @@
-<mat-card class="card">
+<mat-card class="card" >
 <mat-card-title>Environment Variables</mat-card-title>
-<mat-card-subtitle>Click Below</mat-card-subtitle>
-<mat-card-content></mat-card-content>
+<mat-card-subtitle>Show checked value</mat-card-subtitle>
+<mat-card-content *ngFor="let i of i.services;">
+    <h3 style="text-align:left;">checked Services : {{services}}</h3>
+</mat-card-content>
 <mat-card-actions></mat-card-actions>
 <mat-card-footer></mat-card-footer>
 </mat-card>
